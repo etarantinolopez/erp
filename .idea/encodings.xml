@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Gruntfile.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/clients.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/main.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/modules/app.module.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/modules/clients.module.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/modules/main.module.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/clients.service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/main.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/clients.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/main.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower_components/angular-bootstrap/.bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower_components/angular-ui-grid/less/grid.less" charset="UTF-8" />
+  </component>
+</project>

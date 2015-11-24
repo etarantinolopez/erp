@@ -1,0 +1,127 @@
+<div class="container-fluid" ng-controller="ClientsController">
+  <div id="grid1" ui-grid="gridOptions" ui-grid-selection class="myGrid"></div>
+  <p>{{holaMon.data}}</p>
+  <tabset justified="true">
+    <tab heading="Dades Generals"><br>
+
+        <div class="container-fluid">
+          <form class="" role="form">
+            <div class="row">
+              <div class="form-group col-xs-2">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom">
+              </div>
+
+              <div class="form-group col-xs-4">
+                <label for="cognoms">Cognoms</label>
+                <input type="text" class="form-control" id="cognoms">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="nif">NIF</label>
+                <input type="text" class="form-control" id="nif">
+              </div>
+
+              <div class="form-group col-xs-4">
+                <label for="nacionalitat">Nacionalitat</label>
+                <input type="text" class="form-control" id="nacionalitat">
+            </div>
+
+              <div class="form-group col-xs-4">
+                <label for="adreça">Adreça</label>
+                <input type="text" class="form-control" id="adreça">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="poblacio">Població</label>
+                <input type="text" class="form-control" id="poblacio">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="codiPostal">Codi Postal</label>
+                <input type="text" class="form-control" id="codiPostal">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="provincia">Provincia</label>
+                <input type="text" class="form-control" id="provincia">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="pais">Pais</label>
+                <input type="text" class="form-control" id="pais">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="telefon">Telèfon</label>
+                <input type="tel" class="form-control" id="telefon">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="movil1">Mòvil 1</label>
+                <input type="tel" class="form-control" id="movil1">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="movil2">Mòvil 2</label>
+                <input type="tel" class="form-control" id="movil2">
+              </div>
+
+              <div class="form-group col-xs-3">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+
+              <div class="form-group col-xs-3">
+                <label for="url">URL</label>
+                <input type="url" class="form-control" id="url">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="tipusClient">Tipus de client</label>
+                <input type="text" class="form-control" id="tipusClient">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="naturalesaJuridica">Naturalesa Jurídica</label>
+                <select type="text" class="form-control" id="naturalesaJuridica">
+                  <option>Empresa</option>
+                  <option>Persona Jurídica</option>
+                </select>
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="dataAlta">Data d'alta</label>
+                <input type="date" class="form-control" id="dataAlta">
+              </div>
+
+              <div class="form-group col-xs-2">
+                <label for="dataBaixa">Data de baixa</label>
+                <input type="date" class="form-control" id="dataBaixa">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-3">
+                <label for="CCC1">CCC 1</label>
+                <input type="text" class="form-control" id="CCC1">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-3">
+                <label for="CCC1">CCC 1</label>
+                <input type="text" class="form-control" id="CCC1">
+              </div>
+            </div>
+          </form>
+        </div>
+      <br>
+      <button type="button" class="btn btn-success btn-lg" ng-click="clearAll()">Nou</button>
+      <button type="button" class="btn btn-success btn-lg" ng-click="setSelectable()">Editar</button>
+      <button type="button" class="btn btn-success btn-lg" ng-click="toggleFullRowSelection()">Esborrar</button>
+
+    </tab>
+    <tab heading="SJ">Short Labeled Justified content</tab>
+    <tab heading="Long Justified">Long Labeled Justified content</tab>
+  </tabset>
+
+</div>
