@@ -30,7 +30,7 @@ angular
         {field: 'naturalesaJuridica', displayName:'Naturalesa Jurídica',width: '*'}
 
       ],
-      data: $scope.myData = [
+      /**data: $scope.myData = [
         {
           "dni": "43533980v",
           "nom": "Eugenio",
@@ -49,7 +49,9 @@ angular
           "tipusClient": "contable",
           "naturalesaJuridica": "empresa"
         }
-      ]
+      ]*/
+      data: $scope.myData=$scope.holaMon
+
     }
   }]);
 
