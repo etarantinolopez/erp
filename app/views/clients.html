@@ -9,14 +9,9 @@
         <div class="container-fluid">
           <form class="" role="form">
             <div class="row">
-              <div class="form-group col-xs-2">
-                <label for="nom">Nom</label>
+              <div class="form-group col-xs-6">
+                <label for="nom">Nom i cognoms</label>
                 <input type="text" class="form-control" id="nom" ng-model='client.nom'>
-              </div>
-
-              <div class="form-group col-xs-4">
-                <label for="cognoms">Cognoms</label>
-                <input type="text" class="form-control" id="cognoms">
               </div>
 
               <div class="form-group col-xs-2">
@@ -104,14 +99,20 @@
             </div>
           </form>
         </div>
-  </tab>
-    <tab heading="SJ">Short Labeled Justified content</tab>
-    <tab heading="Long Justified">Long Labeled Justified content</tab>
+      <div class="container-fluid">
+        <button type="button" class="btn btn-primary btn-lg" ng-click="crear(client)">Nou</button>
+        <button type="button" class="btn btn-primary btn-lg" ng-click="llegir(dniClientSeleccionat)">Llegir</button>
+        <button type="button" class="btn btn-primary btn-lg" ng-click="actualitzar(client)">Actualitzar</button>
+        <button type="button" class="btn btn-primary btn-lg" ng-click="esborrar(dniClientSeleccionat)">Esborrar</button>
+      </div>
+    </tab>
+    <tab heading="Cites"> <br>
+    </tab>
+    <tab heading="Expedients"><br>
+    </tab>
+    <tab heading="Factures"><br>
+    </tab>
+
   </tabset>
-  <div class="container-fluid">
-    <button type="button" class="btn btn-primary btn-lg" ng-click="crear(client)">Nou</button>
-    <button type="button" class="btn btn-primary btn-lg" ng-click="llegir(dniClientSeleccionat)">Llegir</button>
-    <button type="button" class="btn btn-primary btn-lg" ng-click="actualitzar(client)">Actualitzar</button>
-    <button type="button" class="btn btn-primary btn-lg" ng-click="esborrar(dniClientSeleccionat)">Esborrar</button>
-  </div>
+
 </div>

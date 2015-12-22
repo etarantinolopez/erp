@@ -10,8 +10,8 @@
 angular
   .module('ClientsModule')
   .controller('ClientsController',['$scope', 'uiGridConstants','ClientsServei','$http', function ($scope, uiGridConstants,ClientsServei,$http) {
-    $scope.clientsPage=function(){
 
+    $scope.clientsPage=function(){
       $http.get('http://localhost:8080/tfc/rest/holaMon/json').success(function(data) {
         $scope.gridOptions.data= data;
       });
@@ -28,7 +28,6 @@ angular
       };
 
       $scope.llegir=function(dni){
-
         $http.get('http://localhost:8080/tfc/rest/holaMon/json/'+dni).success(function(data){
           $scope.client.nom=data.nom;
           $scope.client.dni=data.dni;
@@ -39,22 +38,19 @@ angular
       };
 
       $scope.esborrar=function(dni){
-       $http.delete('http://localhost:8080/tfc/rest/holaMon/json/'+dni).success(function(){
+        $http.delete('http://localhost:8080/tfc/rest/holaMon/json/'+dni).success(function(){
           $scope.gridOptions.data.splice($scope.indexSeleccionat,1);
         });
-
       };
 
       $scope.actualitzar=function(client){
-       $http.put('http://localhost:8080/tfc/rest/holaMon/json/'+client.dni,client).success(function(){
+        $http.put('http://localhost:8080/tfc/rest/holaMon/json/'+client.dni,client).success(function(){
           $scope.gridOptions.data[$scope.indexSeleccionat].nom=String(client.nom);
           $scope.gridOptions.data[$scope.indexSeleccionat].tipusClient=String(client.tipusClient);
           $scope.gridOptions.data[$scope.indexSeleccionat].naturalesaJuridica=String(client.naturalesaJuridica);
         });
-      }
-
+      };
     };
-
 
     $scope.gridOptions = {
       enableFiltering: true,
@@ -68,7 +64,6 @@ angular
         {field: 'nom', displayName:'Nom',width: '*'},
         {field: 'tipusClient', displayName:'Tipus Client',width: '*'},
         {field: 'naturalesaJuridica', displayName:'Naturalesa Jurídica',width: '*'}
-
       ],
       onRegisterApi: function(gridApi){
         $scope.gridApi = gridApi;
