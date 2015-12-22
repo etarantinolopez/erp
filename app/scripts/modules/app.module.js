@@ -21,7 +21,10 @@ angular
     'MainCtrls',
     'ClientsModule',
     'ui.grid.selection',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ui.grid.edit',
+    'ui.grid.rowEdit',
+    'ui.grid.cellNav'
   ])
   .config(function ($routeProvider) {
     $routeProvider

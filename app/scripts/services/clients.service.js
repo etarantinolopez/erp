@@ -19,7 +19,5 @@ angular
     });
   }]);*/
   .factory('ClientsServei',['$resource',function($resource){
-    return $resource('http://localhost:8080/tfc/rest/holaMon/json',{},{
-      query:{method:'GET',isArray:true}
-    });
+    return $resource('http://localhost:8080/tfc/rest/holaMon/json');
   }]);

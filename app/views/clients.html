@@ -1,6 +1,8 @@
-<div class="container-fluid" ng-controller="ClientsController">
-  <div id="grid1" ui-grid="gridOptions" ui-grid-selection class="myGrid"></div>
-  <p>{{holaMon[0].dni}}</p>
+<div class="container-fluid" ng-init="clientsPage()" ng-controller="ClientsController">
+  <div id="grid1" ui-grid="gridOptions" ui-grid-selection class="myGrid">
+
+  </div>
+  <p>{{caca}}</p>
   <tabset justified="true">
     <tab heading="Dades Generals"><br>
 
@@ -9,7 +11,7 @@
             <div class="row">
               <div class="form-group col-xs-2">
                 <label for="nom">Nom</label>
-                <input type="text" class="form-control" id="nom">
+                <input type="text" class="form-control" id="nom" ng-model='client.nom'>
               </div>
 
               <div class="form-group col-xs-4">
@@ -19,17 +21,17 @@
 
               <div class="form-group col-xs-2">
                 <label for="nif">NIF</label>
-                <input type="text" class="form-control" id="nif">
+                <input type="text" class="form-control" id="nif" ng-model='client.dni'>
               </div>
 
               <div class="form-group col-xs-4">
                 <label for="nacionalitat">Nacionalitat</label>
                 <input type="text" class="form-control" id="nacionalitat">
-            </div>
+              </div>
 
               <div class="form-group col-xs-4">
-                <label for="adreça">Adreça</label>
-                <input type="text" class="form-control" id="adreça">
+                <label for="adreca">Adreça</label>
+                <input type="text" class="form-control" id="adreca">
               </div>
 
               <div class="form-group col-xs-2">
@@ -79,19 +81,19 @@
 
               <div class="form-group col-xs-2">
                 <label for="tipusClient">Tipus de client</label>
-                <input type="text" class="form-control" id="tipusClient">
+                <input type="text" class="form-control" id="tipusClient" ng-model='client.tipusClient'>
               </div>
 
               <div class="form-group col-xs-2">
                 <label for="naturalesaJuridica">Naturalesa Jurídica</label>
-                <select type="text" class="form-control" id="naturalesaJuridica">
+                <select type="text" class="form-control" id="naturalesaJuridica" ng-model='client.naturalesaJuridica'>
                   <option>Empresa</option>
-                  <option>Persona Jurídica</option>
+                  <option>Persona Juridica</option>
                 </select>
               </div>
 
               <div class="form-group col-xs-2">
-                <label for="dataAlta">Data d'alta</label>
+                <label for="dataAlta">Data alta </label>
                 <input type="date" class="form-control" id="dataAlta">
               </div>
 
@@ -100,28 +102,16 @@
                 <input type="date" class="form-control" id="dataBaixa">
               </div>
             </div>
-            <div class="row">
-              <div class="form-group col-xs-3">
-                <label for="CCC1">CCC 1</label>
-                <input type="text" class="form-control" id="CCC1">
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-xs-3">
-                <label for="CCC1">CCC 1</label>
-                <input type="text" class="form-control" id="CCC1">
-              </div>
-            </div>
           </form>
         </div>
-      <br>
-      <button type="button" class="btn btn-success btn-lg" ng-click="clearAll()">Nou</button>
-      <button type="button" class="btn btn-success btn-lg" ng-click="setSelectable()">Editar</button>
-      <button type="button" class="btn btn-success btn-lg" ng-click="toggleFullRowSelection()">Esborrar</button>
-
-    </tab>
+  </tab>
     <tab heading="SJ">Short Labeled Justified content</tab>
     <tab heading="Long Justified">Long Labeled Justified content</tab>
   </tabset>
-
+  <div class="container-fluid">
+    <button type="button" class="btn btn-primary btn-lg" ng-click="crear(client)">Nou</button>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="llegir(dniClientSeleccionat)">Llegir</button>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="actualitzar(client)">Actualitzar</button>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="esborrar(dniClientSeleccionat)">Esborrar</button>
+  </div>
 </div>
